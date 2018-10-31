@@ -1,0 +1,23 @@
+@import 'Mixins';
+@import 'Reset';
+@import 'Typography';
+@import 'Variables';
+
+@import 'Header';
+@import 'Panels';
+
+.main{
+  
+  padding: 1vmin;
+  padding-top: 13vmin;
+  min-height: 100vh;
+  visibility: hidden;
+
+  &.loaded{
+    visibility: visible;
+    transition: visibility 0s 0.8s;
+  }
+
+}
+
+@import 'Blog';

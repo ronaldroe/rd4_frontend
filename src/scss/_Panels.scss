@@ -1,0 +1,56 @@
+@import 'Mixins';
+@import 'Colors';
+
+.panel{
+
+  background-color: $green;
+  position: fixed;
+  right: -25vw;
+  top: 12.5vmin;
+  height: 87.5vmin;
+  width: 20vw;
+  @include padding-vertical(1vmax);
+  @include padding-horizontal(1vmin);
+  font-size: 2vw;
+  transition: right 0.2s ease-in-out;
+
+  @media (orientation: portrait){
+  
+    width: 33vw;
+    right: -33vw;
+    height: calc(100vh - 12.5vmin);
+  
+  }
+
+  &.shown{
+
+    right: 0;
+    transition: right 0.2s ease-in-out;
+
+  }
+
+  li{
+
+    margin-left: 0;
+    @include padding-vertical(1vmax);
+    @include padding-horizontal(1vmin);
+    list-style: none;
+
+  }
+
+  a{
+
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+
+  }
+
+  svg{
+
+    margin-right: 1vmin;
+
+  }
+
+}

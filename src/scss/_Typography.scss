@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto+Mono:300,400');
+@import 'Mixins';
+@import 'Colors';
+
+body{
+
+  font-family: 'Open Sans', sans-serif;
+  color: $black;
+
+  a{
+
+    color: rgba(69, 105, 144, 1);
+
+  }
+
+}
+
+.page_title{
+
+  margin-bottom: 1vmax;
+  margin-top: 1vmin;
+  font-size: 2vmax;
+  font-style: italic;
+  font-weight: 400;
+  text-align: center;
+
+}
+
+.post{
+
+  &.excerpt{
+
+    @include margin-horizontal(1vmax);
+
+    h3{
+
+      margin-bottom: 1vmax;
+      @include padding-horizontal(1vmax);
+      font-size: 1.5vmax;
+      font-weight: normal;
+      font-style: italic;
+
+    }
+
+  }
+
+  h2, h3, h4{
+
+    margin-bottom: 1vmax;
+    padding-bottom: 1vmin;
+    @include padding-horizontal(1vmax);
+
+  }
+
+  p, code, pre{
+
+    font-size: 1.5vmax;
+
+  }
+
+  p{
+
+    margin-bottom: 1.5vmax;
+    @include padding-horizontal(2vmax);
+
+  }
+
+  code{
+
+    background-color: darken($white, 10%);
+    @include padding-horizontal(1vmin);
+    font-family: 'Roboto Mono', monospace;
+
+  }
+
+  pre{
+
+    background-color: darken($white, 10%);
+    margin: 1vmax;
+    padding: 1vmax !important;
+    overflow-x: scroll;
+
+    code{
+      background: none;
+    }
+
+  }
+
+}
